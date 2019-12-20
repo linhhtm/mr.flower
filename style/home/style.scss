@@ -1,0 +1,216 @@
+$main-pink: #FFDCE0;
+
+$big-text:26px;
+$nor-text: 18px;
+$small-text: 16px;
+
+@import '../common/mixin';
+@import '../common/common.css';
+
+body{
+    font-family: Roboto-Medium;
+    position: relative;
+}
+.red{
+    color: #EB5757;
+}
+
+// common
+.dropdown-menu{
+    border: none;
+    &::before{
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid white;
+        content: "";
+        position: absolute;
+        top: -9px;
+        left: 50%;
+        @include compatible(transform , translateX(-50%));
+        
+    }
+}
+// end common
+
+.navbar{
+    background-color: #ffc2c800;
+    position: fixed;
+    top: 0;
+    color: #FEFCFB;
+    width: 100%;
+    height: 100px;
+    padding: 0;
+    font-size: $nor-text;
+    z-index: 1;
+    @include compatible(transition, .3s);
+    &.scroll{
+        background-color: #fb8190;
+        height: 70px;
+        // background-color: $main-pink;
+        @include compatible(transition, .3s);
+        .navbar-brand{
+            filter: drop-shadow(2px 4px 6px black);
+            img{
+                width:70px;
+            }
+        }
+    }
+    .navbar-brand{
+        padding: 7px 0px 7px 80px;
+    }
+    img{
+        object-fit: contain;
+    }
+    .nav-item{
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+        &.dropdown{
+            .dropdown-menu{
+                top:75px;
+            }
+        }
+        &.active{
+            .nav-link{
+                border-bottom: 1px solid #FEFCFB;
+                padding: 0;
+                color: #FEFCFB;
+            }
+        }
+        .nav-link{
+            font-size: $nor-text;
+            color: #FEFCFB;
+            text-transform: uppercase;
+        }
+    }
+    .navbar-collapse{
+        height: 100%;
+        
+        ul{
+            height: 100%;
+            width: 100%;
+        }
+    }
+    .nav-left{
+        width: 21%;
+        min-width: 230px;
+        i{
+            display: flex;
+            cursor: pointer;
+            font-size: 22px;
+            align-items: center;
+            position: relative;
+            div{
+                position: absolute;
+                top: 60%;
+                left: 50%;
+                color: #47312f;
+                font-size: 14px;
+                @include compatible(transform, translate(-50%,-50%));
+            }
+        }
+        &>div{
+            cursor: pointer;
+            padding: 0 20px;
+        }
+    }
+}
+
+.section{
+    padding: 50px 104px;
+    .section__title{
+        color: #4F4F4F;
+        text-transform: uppercase;
+        font-size: $big-text;
+    }
+    .section__wrap{
+        padding: 0 25px;
+    }
+}
+
+.background__img{
+    position: absolute;
+    &.background__img-left{
+        top: 25%;
+        left: 0;
+    }
+    &.background__img-right{
+        right: 0;
+        top: 64%;
+    }
+}
+.products{
+    padding: 0 10px;
+    position: relative;
+    img{
+        object-fit: contain;
+        width: 100%;
+        margin-top: 20px;
+    }
+    .product__name-inside{
+        position: absolute;
+        bottom: 5px;
+        left: 24px;
+        font-size: 24px;
+    }
+    .product__name{
+        font-size: 24px;
+    }
+    .product__price{
+        text-align: right;
+        margin-bottom: 0;
+    }
+    &.products__single{
+        .product__img{
+            background-color: #f5f6f6;
+            margin-top: 20px;
+            height: calc(100% - 20px);
+        }
+        img{
+            margin: auto;
+            display: block;
+            object-fit: contain;
+            height: 100%;
+        }
+    }
+    .product__price{
+        
+    }
+}
+
+#banner{
+    img{
+        width: 100%;
+    }
+}
+
+#products{
+    .products{
+        .card{
+            font-size: 24px;
+            margin-top: 30px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+            border-radius: 0;
+            img{
+                margin-top: 0;
+            }
+            .product__price{
+                font-size: 30px;
+            }
+            .card-text{
+                
+            }
+        }
+    }
+}
+
+footer{
+    border-top: 1px solid #ACA4A3;
+    padding: 40px 130px !important;
+    font-size: 20px;
+    .title{
+        color: #4F4F4F;
+        font-size: 24px;
+        margin-bottom: 24px;
+    }
+}

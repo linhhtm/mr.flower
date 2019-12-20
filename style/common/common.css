@@ -1,0 +1,30 @@
+
+@font-face{
+    font-family: Roboto-Medium;
+    src: url('../fonts/Roboto-Medium.ttf');
+}
+
+@font-face{
+    font-family: Roboto;
+    src: url('../fonts/Roboto.ttf');
+}
+
+.p-rl-30{
+    padding-right: 30px;
+    padding-left: 30px;
+}
+.pointer{
+    cursor: pointer;
+}
+
+.red{
+    color: #EB5757;
+}
+.btn-info{
+    background-color: #56CCF2;
+    border-color: #56CCF2;
+    &:hover{
+        background-color: #06a5eb;
+        border-color: #06a5eb;
+    }
+}

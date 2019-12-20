@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../images/admin/logo.png">
+    <title>Mr.Flower</title>
+    <!-- Custom CSS -->
+    <link href="../../../style/template/style.css" rel="stylesheet">
+    <link href="../../../style/template/ribbon-page.css" rel="stylesheet">
+    
+    <link href="../../../style/admin/style.css" rel="stylesheet">
+    
+</head>
+
+<!-- skin-default -->
+<body class="fixed-layout">
+    <!-- Preloader - style you can find in spinners.css -->
+    <div class="preloader">
+        <div class="loader">
+            <div class="loader__figure"></div>
+            <p class="loader__label">Mr.Flower</p>
+        </div>
+    </div>
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <div id="main-wrapper">
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
+        <aside class="left-sidebar ">
+            <!-- Logo -->
+            <li class="nav-item text-white float-right  d-flex"><a class="nav-link nav-toggler d-block d-md-none" href="javascript:void(0)"><i class="ti-close ti-menu"></i></a></li>
+            
+            <div class="d-flex justify-content-center">
+                <a class="logo" href="index.html">
+                    <img src="../../../images/admin/logo.png" alt="logo" />
+                </a>
+            </div>
+            <!-- End Logo -->
+            <!-- Sidebar scroll-->
+            <div class="scroll-sidebar">
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav">
+                        <li> <a class="waves-effect waves-dark d-flex align-items-center" href="../overview/index.html" aria-expanded="false"><i class="mdi mdi-chart-areaspline"></i><span class="hide-menu">Overview</span></a></li>
+                        <li> <a class="waves-effect waves-dark d-flex align-items-center" href="../customers/index.html" aria-expanded="false"><i class="mdi mdi-account-multiple-outline"></i><span class="hide-menu">Customers</span></a></li>
+                        <li> <a class="waves-effect waves-dark d-flex align-items-center" href="../suppliers/index.html" aria-expanded="false"><i class="mdi mdi-garage"></i><span class="hide-menu">Suppliers</span></a></li>
+                        <li> <a class="waves-effect waves-dark d-flex align-items-center" href="../orders/index.html" aria-expanded="false"><i class="mdi mdi-cart-outline"></i><span class="hide-menu">Orders</span></a></li>
+                        <li> <a class="waves-effect waves-dark d-flex align-items-center" href="../delivery/index.html" aria-expanded="false"><i class="mdi mdi-truck-delivery"></i><span class="hide-menu">Delivery</span></a></li>
+                        <li> <a class="waves-effect waves-dark d-flex align-items-center" href="../stocks/index.html" aria-expanded="false"><i class="mdi mdi-account-multiple-outline"></i><span class="hide-menu">Stocks</span></a></li>
+                        <li class="hasarrow"> 
+                            <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false">
+                                <i class="mdi mdi-home-outline"></i>
+                                <span class="hide-menu">
+                                    Homepage 
+                                </span>
+                            </a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a href="../homepage/shop_info.html">Shop info </a></li>
+                                <li><a href="../homepage/products.html">Products</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- End Sidebar navigation -->
+            </div>
+            <!-- End Sidebar scroll-->
+        </aside>
+        <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- Page wrapper  -->
+        <div class="page-wrapper">
+            <nav class="navbar top-navbar navbar-expand-md">
+                <div class="navbar-collapse">
+                    <!-- toggle and nav items -->
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item"> <a class="nav-link nav-toggler d-block d-md-none" href="javascript:void(0)"><i class="text-white fa-2x ti-close ti-menu"></i></a> </li>
+
+                        <li class="nav-item d-flex"> <a class="nav-link sidebartoggler d-none d-lg-flex d-md-flex waves-effect waves-dark align-items-center" href="javascript:void(0)"><i class="fa-2x icon-menu"></i></a> </li>
+                        <!-- Search -->
+                        <li class="nav-item w-100">
+                            <form class="navbar-search">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="basic-addon4"><i class="fas fa-search"></i></span>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Search..." aria-label="Password" aria-describedby="basic-addon4">
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                    <!-- User profile -->
+                    <ul class="navbar-nav my-lg-0">
+                        <li class="nav-item dropdown">
+                            <div class="user-profile">
+                                <div class="user-pro-body">
+                                    <div><img src="../../../images/users/2.jpg" alt="user-img" class="img-circle"></div>
+                                </div>
+                            </div>
+                            <div class="dropdown-menu dropdown-menu-right mailbox animated bounceInDown">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="content p-rl-30">
+                <div class="overview">
+                    <div class="container-fluid">
+                        <!-- Bread crumb and right sidebar toggle -->
+                        <div class="row page-titles">
+                            <div class="col-md-5 align-self-center">
+                                <h4 class="text-themecolor">Dashboard</h4>
+                            </div>
+                            <!-- <div class="col-md-7 align-self-center text-right">
+                                <div class="d-flex justify-content-end align-items-center">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
+                                        <li class="breadcrumb-item active">Dashboard</li>
+                                    </ol>
+                                    <button type="button" class="btn btn-info d-none d-lg-block m-l-15"><i class="fa fa-plus-circle"></i> Create New</button>
+                                </div>
+                            </div> -->
+                            <!-- End Bread crumb and right sidebar toggle -->
+                        </div>
+                        <div class="row page-desc">
+                            <h4>Shop Information</h4>
+                            <p>Hello Richard Williams From your My Account Dashboard you have the ability to view a snapshot of your recent account activity and update your account information. Select a link below to view or edit information.</p>
+                            <div class="page-desc-edit d-flex ml-auto pointer">
+                                <i class="mdi mdi-lead-pencil mr-2"></i>
+                                <div>Edit</div>
+                            </div>
+                        </div>
+                        <!-- Info box Content -->
+                        <div class="row page-statistic">
+                            <div class="col-lg-4 col-md-6">
+                                <div class="card card-orders">
+                                    <div class="card-body d-flex">
+                                        <div class="card-icon">
+                                            <i class="mdi mdi-cart-outline"></i>
+                                        </div>
+                                        <div class="ml-auto text-right"> 
+                                            <h1 class="font-light"> 12,000</h1>
+                                            <span class="text-muted">Todays Order</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-4 col-md-6">
+                                <div class="card card-needorder">
+                                    <div class="card-body d-flex">
+                                        <div class="card-icon">
+                                            <i class="ti ti-briefcase"></i>
+                                        </div>
+                                        <div class="ml-auto text-right"> 
+                                            <h1 class="font-light"> 12,000</h1>
+                                            <span class="text-muted">Need order</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="card card-staff">
+                                    <div class="card-body d-flex">
+                                        <div class="card-icon">
+                                            <i class="ti ti-user"></i>
+                                        </div>
+                                        <div class="ml-auto text-right"> 
+                                            <h1 class="font-light"> 12,000</h1>
+                                            <span class="text-muted">Staff</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- products -->
+                        <div class="row products section">
+                            <div class="col-12">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h4 class="title">Products</h4>
+                                    </div>
+                                    <div class="col-md-6 col-lg-3">
+                                        <div class="product ribbon-wrapper-reverse card">
+                                            <div class="card-body">
+                                                <div class="ribbon ribbon-bookmark ribbon-vertical-r">Hot</div>
+                                                <div class="product-img">
+                                                    <img src="../../../images/products/3.png" class="w-100">
+                                                </div>
+                                                <div class="product-text">
+                                                    <div class="product-name text-truncate">
+                                                        Rose white
+                                                    </div>
+                                                    <div class="d-flex justify-content-between">
+                                                        <h5 class="card-title m-b-0 product-price">$ 10.00</h5>
+                                                        <button class="btn btn-radiant waves-effect waves-light">View</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-3">
+                                        <div class="product ribbon-wrapper-reverse card">
+                                            <div class="card-body">
+                                                <div class="ribbon ribbon-bookmark ribbon-vertical-r">Hot</div>
+                                                <div class="product-img">
+                                                    <img src="../../../images/products/3.png" class="w-100">
+                                                </div>
+                                                <div class="product-text">
+                                                    <div class="product-name text-truncate">
+                                                        Rose white
+                                                    </div>
+                                                    <div class="d-flex justify-content-between">
+                                                        <h5 class="card-title m-b-0 product-price">$ 10.00</h5>
+                                                        <button class="btn btn-radiant waves-effect waves-light">View</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-3">
+                                        <div class="product ribbon-wrapper-reverse card">
+                                            <div class="card-body">
+                                                <div class="ribbon ribbon-bookmark ribbon-vertical-r">Hot</div>
+                                                <div class="product-img">
+                                                    <img src="../../../images/products/3.png" class="w-100">
+                                                </div>
+                                                <div class="product-text">
+                                                    <div class="product-name text-truncate">
+                                                        Rose white
+                                                    </div>
+                                                    <div class="d-flex justify-content-between">
+                                                        <h5 class="card-title m-b-0 product-price">$ 10.00</h5>
+                                                        <button class="btn btn-radiant waves-effect waves-light">View</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-3">
+                                        <div class="product ribbon-wrapper-reverse card">
+                                            <div class="card-body">
+                                                <!-- <div class="ribbon ribbon-bookmark ribbon-vertical-r">Hot</div> -->
+                                                <div class="product-img">
+                                                    <img src="../../../images/products/3.png" class="w-100">
+                                                </div>
+                                                <div class="product-text">
+                                                    <div class="product-name text-truncate">
+                                                        Rose white
+                                                    </div>
+                                                    <div class="d-flex justify-content-between">
+                                                        <h5 class="card-title m-b-0 product-price">$ 10.00</h5>
+                                                        <button class="btn btn-radiant waves-effect waves-light">View</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- stock -->
+                        <div class="row products section">
+                            <div class="col-12">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h4 class="title">Stock</h4>
+                                    </div>
+                                    <div class="col-md-6 col-lg-3">
+                                        <div class="product ribbon-wrapper-reverse card">
+                                            <div class="card-body">
+                                                <div class="product-name text-truncate">
+                                                    Rose white
+                                                </div>
+                                                <div class="">Qty: <span class="red">Out of stock</span></div>
+                                                <div class="product-img">
+                                                    <img src="../../../images/products/3.png" class="w-100 mt-3">
+                                                </div>
+                                                <div class="product-btn d-flex justify-content-center flex-wrap">
+                                                    <button class="btn btn-radiant waves-effect waves-light">Order</button>
+                                                    <button type="button" class="btn waves-effect waves-light btn-info">Update</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-3">
+                                        <div class="product ribbon-wrapper-reverse card">
+                                            <div class="card-body">
+                                                <div class="product-name text-truncate">
+                                                    Rose white
+                                                </div>
+                                                <div class="">Qty: <span class="red">5</span></div>
+                                                <div class="product-img">
+                                                    <img src="../../../images/products/3.png" class="w-100 mt-3">
+                                                </div>
+                                                <div class="product-btn d-flex justify-content-center flex-wrap">
+                                                    <button class="btn btn-radiant waves-effect waves-light">Order</button>
+                                                    <button type="button" class="btn waves-effect waves-light btn-info">Update</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-3">
+                                        <div class="product ribbon-wrapper-reverse card">
+                                            <div class="card-body">
+                                                <div class="product-name text-truncate">
+                                                    Rose white
+                                                </div>
+                                                <div class="">Qty: <span class="red">Out of stock</span></div>
+                                                <div class="product-img">
+                                                    <img src="../../../images/products/3.png" class="w-100 mt-3">
+                                                </div>
+                                                <div class="product-btn d-flex justify-content-center flex-wrap">
+                                                    <button class="btn btn-radiant waves-effect waves-light">Order</button>
+                                                    <button type="button" class="btn waves-effect waves-light btn-info">Update</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-3">
+                                        <div class="product ribbon-wrapper-reverse card">
+                                            <div class="card-body">
+                                                <div class="product-name text-truncate">
+                                                    Rose white
+                                                </div>
+                                                <div class="">Qty: <span class="red">1</span></div>
+                                                <div class="product-img">
+                                                    <img src="../../../images/products/3.png" class="w-100 mt-3">
+                                                </div>
+                                                <div class="product-btn d-flex justify-content-center flex-wrap">
+                                                    <button class="btn btn-radiant waves-effect waves-light">Order</button>
+                                                    <button type="button" class="btn waves-effect waves-light btn-info">Update</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- End PAge Content -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Page wrapper  -->
+        <!-- footer -->
+        <footer class="footer">
+            © Copyright 2019 All rights reserved
+        </footer>
+        <!-- End footer -->
+    </div>
+    <!-- End Wrapper -->
+    
+    <script src="../../../vendors/js/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="../../../vendors/js/popper.min.js"></script>
+    <script src="../../../vendors/js/bootstrap.min.js"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="../../../vendors/js/perfect-scrollbar.jquery.min.js"></script>
+    <!--Wave Effects -->
+    <script src="../../../vendors/js/waves.js"></script>
+    <!--Menu sidebar -->
+    <script src="../../../vendors/js/sidebarmenu.js"></script>
+    
+    <script src="../../../js/template.js"></script>
+    
+    <!--Custom JavaScript -->
+    <!-- <script src="../../../js/admin/overview.js"></script> -->
+</body>
+
+</html>
