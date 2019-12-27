@@ -16,15 +16,36 @@
 .pointer{
     cursor: pointer;
 }
-
+.clearfix{
+    clear: both;
+}
 .red{
     color: #EB5757;
 }
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="date"]::-webkit-inner-spin-button{
+    display: none;
+}
+/* .form-row .col {
+    padding-left: 10px;
+    padding-right: 10px;
+} */
 .btn-info{
     background-color: #56CCF2;
     border-color: #56CCF2;
-    &:hover{
-        background-color: #06a5eb;
-        border-color: #06a5eb;
+    display: flex;
+    align-items: center;
+}
+.btn-info:hover{
+    background-color: #06a5eb;
+    border-color: #06a5eb;
+}
+.pointer{
+    cursor: pointer;
+}
+
+@media screen and (min-width:768px){
+    .w-md-75{
+        width: 75%;
     }
 }

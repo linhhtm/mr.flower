@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../images/admin/logo.png">
+    <title>Mr.Flower</title>
+    <!-- Custom CSS -->
+    <link href="../../../style/template/style.css" rel="stylesheet">
+    <link href="../../../style/template/ribbon-page.css" rel="stylesheet">
+    <link href="../../../vendors/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link href="../../../vendors/css/responsive.dataTables.min.css" rel="stylesheet">
+    
+    <link href="../../../style/admin/style.css" rel="stylesheet">
+    
+</head>
+
+<!-- skin-default -->
+<body class="fixed-layout">
+    <!-- Preloader - style you can find in spinners.css -->
+    <div class="preloader">
+        <div class="loader">
+            <div class="loader__figure"></div>
+            <p class="loader__label">Mr.Flower</p>
+        </div>
+    </div>
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <div id="main-wrapper">
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
+        <aside class="left-sidebar ">
+            <!-- Logo -->
+            <li class="nav-item text-white float-right  d-flex"><a class="nav-link nav-toggler d-block d-md-none" href="javascript:void(0)"><i class="ti-close ti-menu"></i></a></li>
+            
+            <div class="d-flex justify-content-center">
+                <a class="logo" href="index.html">
+                    <img src="../../../images/admin/logo.png" alt="logo" />
+                </a>
+            </div>
+            <!-- End Logo -->
+            <!-- Sidebar scroll-->
+            <div class="scroll-sidebar">
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav">
+                        <li> <a class="waves-effect waves-dark d-flex align-items-center" href="../overview/index.html" aria-expanded="false"><i class="mdi mdi-chart-areaspline"></i><span class="hide-menu">Overview</span></a></li>
+                        <li> <a class="waves-effect waves-dark d-flex align-items-center" href="../customers/index.html" aria-expanded="false"><i class="mdi mdi-account-multiple-outline"></i><span class="hide-menu">Customers</span></a></li>
+                        <li> <a class="waves-effect waves-dark d-flex align-items-center" href="../suppliers/index.html" aria-expanded="false"><i class="mdi mdi-garage"></i><span class="hide-menu">Suppliers</span></a></li>
+                        <li> <a class="waves-effect waves-dark d-flex align-items-center" href="../orders/index.html" aria-expanded="false"><i class="mdi mdi-cart-outline"></i><span class="hide-menu">Orders</span></a></li>
+                        <li> <a class="waves-effect waves-dark d-flex align-items-center" href="../delivery/index.html" aria-expanded="false"><i class="mdi mdi-truck-delivery"></i><span class="hide-menu">Delivery</span></a></li>
+                        <li> <a class="waves-effect waves-dark d-flex align-items-center" href="../stocks/index.html" aria-expanded="false"><i class="mdi mdi-account-multiple-outline"></i><span class="hide-menu">Stocks</span></a></li>
+                        <li class="hasarrow"> 
+                            <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false">
+                                <i class="mdi mdi-home-outline"></i>
+                                <span class="hide-menu">
+                                    Homepage 
+                                </span>
+                            </a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a href="../homepage/shop_info.html">Shop info </a></li>
+                                <li><a href="../homepage/products.html">Products</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- End Sidebar navigation -->
+            </div>
+            <!-- End Sidebar scroll-->
+        </aside>
+        <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+        
+        <!-- Page wrapper  -->
+        <div class="page-wrapper">
+            <nav class="navbar top-navbar navbar-expand-md">
+                <div class="navbar-collapse">
+                    <!-- toggle and nav items -->
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item"> <a class="nav-link nav-toggler d-block d-md-none" href="javascript:void(0)"><i class="text-white fa-2x ti-close ti-menu"></i></a> </li>
+                        
+                        <li class="nav-item d-flex"> <a class="nav-link sidebartoggler d-none d-lg-flex d-md-flex waves-effect waves-dark align-items-center" href="javascript:void(0)"><i class="fa-2x icon-menu"></i></a> </li>
+                        <!-- Search -->
+                        <li class="nav-item w-100">
+                            <form class="navbar-search">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="basic-addon4"><i class="fas fa-search"></i></span>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Search..." aria-label="Password" aria-describedby="basic-addon4">
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                    <!-- User profile -->
+                    <ul class="navbar-nav my-lg-0">
+                        <li class="nav-item dropdown">
+                            <div class="user-profile">
+                                <div class="user-pro-body">
+                                    <div><img src="../../../images/users/2.jpg" alt="user-img" class="img-circle"></div>
+                                </div>
+                            </div>
+                            <div class="dropdown-menu dropdown-menu-right mailbox animated bounceInDown">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            
+            <!-- main content -->
+            <div class="content p-rl-30">
+                <div class="suppliers-detail">
+                    <div class="container-fluid">
+                        <!-- Bread crumb and right sidebar toggle -->
+                        <div class="row page-titles mb-0">
+                            <div class="col-md-5 align-self-center">
+                                <h4 class="text-themecolor">Bosun Jones</h4>
+                            </div>
+                            <ol class="col-12 breadcrumb">
+                                <li class="breadcrumb-item"><a href="javascript:void(0)">Suppliers</a></li>
+                                <li class="breadcrumb-item active">Bosun Jones</li>
+                            </ol>
+                        </div>
+                        
+                        <div class="row content__wrap">
+                            <div class="col-12 d-flex flex-wrap justify-content-between">
+                                <form class="w-100 form-supplier-detail" novalidate>
+                                    <div class="icon-edit float-right pointer" onclick="openModalEdit('.form-supplier-detail' , '#modalSupplier')">
+                                        <i class="fa fas fa-pencil-alt mr-2"></i>
+                                        Edit
+                                    </div>
+                                    <div class="form-group row clearfix">
+                                        <label for="supplier-id" class="col-form-label">ID:</label>
+                                        <div class="col-form-input">
+                                            <input class="form-control-plaintext" type="text" readonly value="12" id="supplier-id" name="supplier-id">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-md-6 col-12">
+                                            <div class="form-group row">
+                                                <label for="supplier-name" class="col-form-label">Name:</label>
+                                                <div class="col-form-input">
+                                                    <input class="form-control-plaintext" type="text" readonly value="Bosun Jones" id="supplier-name" name="supplier-name">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-12">
+                                            <div class="form-group row">
+                                                <label for="supplier-phone" class="col-form-label">Phone:</label>
+                                                <div class="col-form-input">
+                                                    <input class="form-control-plaintext" type="text" readonly value="(270) 555-0117" id="supplier-phone" name="supplier-phone">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="supplier-manager" class="col-form-label">Manager:</label>
+                                        <div class="col-form-input">
+                                            <input class="form-control-plaintext" type="text" readonly value="Louise The First" id="supplier-manager" name="supplier-manager">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="supplier-address" class="col-form-label">Address:</label>
+                                        <div class="col-form-input">
+                                            <input class="form-control-plaintext" type="text" readonly value="3772 Photinia Ave undefined Omaha, Iowa 23302 United States" id="supplier-address" name="supplier-address">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="supplier-memo" class="col-form-label">Memo:</label>
+                                        <div class="col-form-input">
+                                            <input class="form-control-plaintext" type="text" readonly value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Turpis." id="supplier-memo" name="supplier-memo">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-md-6 col-12">
+                                            <div class="form-group row">
+                                                <label for="supplier-orders" class="col-form-label">Orders:</label>
+                                                <div class="col-form-input">
+                                                    <input class="form-control-plaintext" type="text" readonly value="20 Times" id="supplier-orders">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-12">
+                                            <div class="form-group row">
+                                                <label for="supplier-date" class="col-form-label" style="width: 120px;">Last Order Date:</label>
+                                                <div class="col-form-input" style="width: calc(100% - 150px)">
+                                                    <input class="form-control-plaintext" type="text" readonly value="20/11/2019" id="supplier-date">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-12">
+                                <div class="">
+                                    <table id="table_suppliers-orders" class="w-100 datatable_custom display nowrap table table-hover" cellspacing="0">
+                                        <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th>Order ID</th>
+                                                <th>Product Code</th>
+                                                <th>Product</th>
+                                                <th>Qty</th>
+                                                <th>Price</th>
+                                                <th>Order Date</th>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End PAge Content -->
+                    </div>
+                </div>
+            </div>
+            <!-- end main content -->
+            
+            <!-- modal common. place it in layout -->
+            <div id="modalSupplier" class="modal modal-add fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="display: none;" aria-hidden="true">
+                <div class="modal-dialog  modal-dialog-centered">
+                    <div class="modal-content">
+                        <form novalidate>
+                            <div class="modal-header">
+                                <div class="modal-title text-center">Add supplier</div>
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label for="supplier-name" class="control-label">Name</label>
+                                    <input 
+                                    name="supplier-name"
+                                    type="text" 
+                                    class="form-control" 
+                                    id="supplier-name-modal" 
+                                    value="violet" 
+                                    required 
+                                    data-validation-required-message="Name is required">
+                                    <p class="help-block"></p>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label for="supplier-phone" class="control-label">Phone</label>
+                                            <input 
+                                            name="supplier-phone"
+                                            type="text" 
+                                            class="form-control" 
+                                            id="supplier-phone-modal" 
+                                            value="0231232323" 
+                                            required 
+                                            data-validation-required-message="Phone is required">
+                                            <p class="help-block"></p>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label for="supplier-manager" class="control-label">Manager</label>
+                                            <input 
+                                            name="supplier-manager"
+                                            type="text" 
+                                            class="form-control" 
+                                            id="supplier-manager-modal" 
+                                            value="violet" 
+                                            required 
+                                            data-validation-required-message="Manager's name is required">
+                                            <p class="help-block"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="supplier-address" class="control-label">Address</label>
+                                    <input 
+                                    name="supplier-address"
+                                    type="text" 
+                                    class="form-control" 
+                                    id="supplier-address-modal" 
+                                    value="675 ngo duc ke street, vung tau city" 
+                                    required 
+                                    data-validation-required-message="Address is required">
+                                    <p class="help-block"></p>
+                                </div>
+                                <div class="form-group">
+                                    <label for="supplier-memo" class="control-label">Memo</label>
+                                    <input 
+                                    name="supplier-memo"
+                                    type="text" 
+                                    class="form-control" 
+                                    id="supplier-memo-modal" 
+                                    value="Lorem supplier sth sth sth sth sth sth" 
+                                    required 
+                                    data-validation-required-message="Memo is required">
+                                    <p class="help-block"></p>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-radiant waves-effect waves-light m-auto">Add</button>
+                            </div>
+                        </form>
+                        
+                    </div>
+                </div>
+            </div>
+            <!-- end modal -->
+        </div>
+        <!-- End Page wrapper  -->
+        
+        <!-- footer -->
+        <footer class="footer">
+            © Copyright 2019 All rights reserved
+        </footer>
+        <!-- End footer -->
+    </div>
+    <!-- End Wrapper -->
+    
+    <script src="../../../vendors/js/jquery-3.2.1.min.js"></script>
+    <script src="../../../vendors/js/popper.min.js"></script>
+    <script src="../../../vendors/js/bootstrap.min.js"></script>
+    
+    <script src="../../../vendors/js/perfect-scrollbar.jquery.min.js"></script>
+    <script src="../../../vendors/js/waves.js"></script>
+    <script src="../../../vendors/js/sidebarmenu.js"></script>
+    <script src="../../../vendors/js/Faker.min.js"></script>
+    <script src="../../../vendors/js/moment.js"></script>
+    <script src="../../../vendors/js/validation.js"></script>
+    <script src="../../../vendors/js/jquery.dataTables.min.js"></script>
+    <script src="../../../vendors/js/dataTables.responsive.min.js"></script>
+    
+    <script src="../../../js/template.js"></script>
+    
+    <!--Custom JavaScript -->
+    <script src="../../../js/common.js"></script>
+    <script src="../../../js/suppliers/supplier.js"></script>
+    <script>
+        ! function(window, document, $) {
+            "use strict";
+            $("input,select,textarea").not("[type=submit]").jqBootstrapValidation();
+        }(window, document, jQuery);
+    </script>
+</body>
+
+</html>

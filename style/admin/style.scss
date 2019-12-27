@@ -14,9 +14,103 @@ $background-image: linear-gradient(90.44deg, #FFBE9C 12.25%, #F4C390 55.45%, #FE
 body{
     font-family: Roboto;
 }
+h1,h2,h3,h4,h5,h6{
+    font-family: Roboto;
+}
 .footer{
     background: $background-image;
     color: white;
+}
+.icon-edit{
+    padding: 10px;
+    border-radius: 4px;
+    display: block;
+    text-align: right;
+    @include compatible(transition, .2s);
+    &:hover{
+        background-color: #dedede;
+        @include compatible(transition, .2s);
+    }
+}
+.modal , .form-common{
+    .modal-header .modal-title{
+        color: #433528;
+        font-size: 24px;
+        width: 100%;
+    }
+    form{
+        label{
+            color: #ACA4A3;
+            padding-left: 10px;
+            font-size: 16px;
+        }
+        input, select, textarea{
+            color: #433528;
+            border-radius: 0;
+            border: 1px solid #ACA4A3;
+        }
+        input,select{
+            height: 50px;
+        }
+        .modal-footer{
+            border-top: unset;
+            padding-top: 0;
+            padding-bottom: 30px;
+        }
+    }
+    button[type="submit"]{
+        height: 50px;
+        font-size: 18px;
+        width: 100%;
+        max-width: 250px;
+    }
+}
+.datatable_custom{
+    margin-top:20px;
+    th, td{
+        color: #433528;
+        border-top: unset;
+        border-bottom: 1px solid #e9ecef;
+    }
+    td{
+        cursor: pointer;
+    }
+}
+.dataTables_wrapper{
+    padding: 0;
+    .pagination{
+        justify-content: flex-end;
+    }
+    table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>td:first-child:before, table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>th:first-child:before{
+        top: 19px;
+    }
+    .dataTables_filter{
+        label{
+            text-align: left;
+        }
+    }
+}
+.table-basic{
+    th{
+        font-size: 18px;
+    }
+    td{
+        font-size: 16px;
+    }
+}
+.table-products{
+    img{
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        object-fit: contain;
+        margin-right: 16px;
+    }
+}
+.border-radient{
+    height: 4px;
+    background: $background-image;
+    width: 100%;
 }
 .mini-sidebar .sidebar-nav #sidebarnav > li:hover > a{
     background-color: #f9f9f9;
@@ -167,6 +261,33 @@ body{
 .content{
     position: relative;
     margin-top: -130px;
+    padding-bottom: 35px;
+    .page-titles h4{
+        font-size: 24px;
+        text-transform: capitalize;
+    }
+    .content__wrap{
+        margin-bottom: 10px;
+        padding: 25px 30px;
+        background-color: white;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+    }
+    .breadcrumb{
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 16px;
+        li a{
+            text-transform: capitalize;
+            color: white;
+        }
+        .breadcrumb-item + .breadcrumb-item::before{
+            color: white;
+        }
+        li.breadcrumb-item.active{
+            color: white;
+            text-transform: capitalize;
+        }
+    }
 }
 .overview{
     .page-desc{
@@ -282,15 +403,60 @@ body{
         }
     }
 }
-
+.customers{
+    .table__wrap{
+        .table-name{
+            font-size: 24px;
+            text-transform: capitalize;
+            background: $background-image;
+            @include compatible(background-clip,text);
+            @include compatible(text-fill-color,transparent);
+        }
+        .table-btn-add{
+            text-transform: capitalize;
+        }
+    }
+}
+.orders-detail{
+    .content__wrap:last-child{
+        .form-row{
+            .col-form-label{
+                margin-right: 10px;
+            }
+            .col-form-input{
+                width: calc(100% - 100px);
+            }
+        }
+    }
+}
+.orders-add{
+    form{
+    }
+}
+.customers-detail , .suppliers-detail, .orders-detail{
+    form{
+        .col-form-label{
+            width: 100px;            
+        }
+        .col-form-input{
+            width: calc(100% - 100px);
+        }
+    }
+}
 @media screen and (max-width:768px){
     .navbar{
         padding: 30px 40px;
+    }
+    .col{
+        flex-basis: unset;
     }
 }
 @media screen and (max-width:425px){
     body{
         font-size: $nor-text;
+    }
+    .content {
+        padding: 0 15px;
     }
     .auth .form .form-title{
         font-size: $big-text;

@@ -3,9 +3,109 @@ body {
   font-family: Roboto;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: Roboto;
+}
+
 .footer {
   background: linear-gradient(90.44deg, #FFBE9C 12.25%, #F4C390 55.45%, #FEE3AE 96.9%);
   color: white;
+}
+
+.icon-edit {
+  padding: 10px;
+  border-radius: 4px;
+  display: block;
+  text-align: right;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+}
+.icon-edit:hover {
+  background-color: #dedede;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+}
+
+.modal .modal-header .modal-title, .form-common .modal-header .modal-title {
+  color: #433528;
+  font-size: 24px;
+  width: 100%;
+}
+.modal form label, .form-common form label {
+  color: #ACA4A3;
+  padding-left: 10px;
+  font-size: 16px;
+}
+.modal form input, .modal form select, .modal form textarea, .form-common form input, .form-common form select, .form-common form textarea {
+  color: #433528;
+  border-radius: 0;
+  border: 1px solid #ACA4A3;
+}
+.modal form input, .modal form select, .form-common form input, .form-common form select {
+  height: 50px;
+}
+.modal form .modal-footer, .form-common form .modal-footer {
+  border-top: unset;
+  padding-top: 0;
+  padding-bottom: 30px;
+}
+.modal button[type=submit], .form-common button[type=submit] {
+  height: 50px;
+  font-size: 18px;
+  width: 100%;
+  max-width: 250px;
+}
+
+.datatable_custom {
+  margin-top: 20px;
+}
+.datatable_custom th, .datatable_custom td {
+  color: #433528;
+  border-top: unset;
+  border-bottom: 1px solid #e9ecef;
+}
+.datatable_custom td {
+  cursor: pointer;
+}
+
+.dataTables_wrapper {
+  padding: 0;
+}
+.dataTables_wrapper .pagination {
+  justify-content: flex-end;
+}
+.dataTables_wrapper table.dataTable.dtr-inline.collapsed > tbody > tr[role=row] > td:first-child:before, .dataTables_wrapper table.dataTable.dtr-inline.collapsed > tbody > tr[role=row] > th:first-child:before {
+  top: 19px;
+}
+.dataTables_wrapper .dataTables_filter label {
+  text-align: left;
+}
+
+.table-basic th {
+  font-size: 18px;
+}
+.table-basic td {
+  font-size: 16px;
+}
+
+.table-products img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: contain;
+  margin-right: 16px;
+}
+
+.border-radient {
+  height: 4px;
+  background: linear-gradient(90.44deg, #FFBE9C 12.25%, #F4C390 55.45%, #FEE3AE 96.9%);
+  width: 100%;
 }
 
 .mini-sidebar .sidebar-nav #sidebarnav > li:hover > a {
@@ -166,6 +266,33 @@ body {
 .content {
   position: relative;
   margin-top: -130px;
+  padding-bottom: 35px;
+}
+.content .page-titles h4 {
+  font-size: 24px;
+  text-transform: capitalize;
+}
+.content .content__wrap {
+  margin-bottom: 10px;
+  padding: 25px 30px;
+  background-color: white;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+}
+.content .breadcrumb {
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 16px;
+}
+.content .breadcrumb li a {
+  text-transform: capitalize;
+  color: white;
+}
+.content .breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+  color: white;
+}
+.content .breadcrumb li.breadcrumb-item.active {
+  color: white;
+  text-transform: capitalize;
 }
 
 .overview .page-desc {
@@ -270,14 +397,55 @@ body {
   margin: 3px 10px;
 }
 
+.customers .table__wrap .table-name {
+  font-size: 24px;
+  text-transform: capitalize;
+  background: linear-gradient(90.44deg, #FFBE9C 12.25%, #F4C390 55.45%, #FEE3AE 96.9%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -ms-background-clip: text;
+  -o-background-clip: text;
+  text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  -ms-text-fill-color: transparent;
+  -o-text-fill-color: transparent;
+}
+.customers .table__wrap .table-btn-add {
+  text-transform: capitalize;
+}
+
+.orders-detail .content__wrap:last-child .form-row .col-form-label {
+  margin-right: 10px;
+}
+.orders-detail .content__wrap:last-child .form-row .col-form-input {
+  width: calc(100% - 100px);
+}
+
+.customers-detail form .col-form-label, .suppliers-detail form .col-form-label, .orders-detail form .col-form-label {
+  width: 100px;
+}
+.customers-detail form .col-form-input, .suppliers-detail form .col-form-input, .orders-detail form .col-form-input {
+  width: calc(100% - 100px);
+}
+
 @media screen and (max-width: 768px) {
   .navbar {
     padding: 30px 40px;
+  }
+
+  .col {
+    flex-basis: unset;
   }
 }
 @media screen and (max-width: 425px) {
   body {
     font-size: 16px;
+  }
+
+  .content {
+    padding: 0 15px;
   }
 
   .auth .form .form-title {
